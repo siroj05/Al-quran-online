@@ -4,6 +4,7 @@ import { computed } from 'vue'
 import Card from '@/components/Card.vue'
 import { ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { MagnifyingGlassCircleIcon, MagnifyingGlassIcon } from '@heroicons/vue/16/solid'
 
 const route = useRoute()
 const router = useRouter()
@@ -34,12 +35,20 @@ const filteredSurah = computed(() => {
 
 <template>
   <main class="mx-20 lg:max-w-5xl sm:mx-20 lg:mx-auto mt-10">
-    <div class="mx-auto my-10">
-      <input
-        type="text"
-        class="bg-white text-black px-2 rounded-lg w-full h-9 border"
-        v-model="search"
-      />
+    <div class="mx-auto my-10 sticky top-3 z-30">
+      <div
+        class="relative group border rounded-lg bg-white transition focus-within:border-green-600"
+      >
+        <input
+          type="text"
+          class="bg-white text-black px-2 rounded-lg w-full h-9 border focus:outline-none"
+          v-model="search"
+          placeholder="Cari surat.."
+        />
+        <MagnifyingGlassIcon
+          class="absolute right-3 -translate-x-1/2 top-1/2 -translate-y-1/2 w-8 h-8 text-gray-400 transition-all duration-300 ease-out group-focus-within:w-6 group-focus-within:h-6 group-focus-within:top-0 group-focus-within:-translate-y-1/2 group-focus-within:text-green-600 group-focus-within:bg-white px-1"
+        />
+      </div>
     </div>
     <div class="font-bold text-2xl mb-5">Daftar Surat :</div>
     <div v-if="isLoading">Loading...</div>

@@ -1,0 +1,9 @@
+@font-face {
+  font-family: UthmanicHafs;
+  src: url('../assets/fonts/uthmanic-hafs/Uthmanic-Script-Regular.ttf') format('truetype');
+}
+@import 'tailwindcss';
+
+@theme {
+  --font-quran: UthmanicHafs, 'sans-serif';
+}

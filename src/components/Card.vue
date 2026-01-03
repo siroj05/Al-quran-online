@@ -14,10 +14,10 @@ defineProps<{
     class="block border rounded-lg p-5 hover:border-green-500 cursor-pointer transition hover:bg-green-500/10"
   >
     <div class="flex flex-col space-y-3">
-      <span class="font-quran text-5xl" dir="rtl">
+      <span class="font-quran text-5xl max-sm:text-2xl" dir="rtl">
         {{ surah.nama }}
       </span>
-      <span class="ml-2 text-base text-gray-600">
+      <span class="ml-2 text-base max-sm:text-[10px] text-gray-600">
         {{ surah.nomor + 1 }}. ({{ surah.namaLatin }}) - {{ surah.jumlahAyat }} ayat
       </span>
     </div>

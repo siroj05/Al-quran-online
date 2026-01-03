@@ -34,7 +34,7 @@ const filteredSurah = computed(() => {
 </script>
 
 <template>
-  <main class="mx-20 lg:max-w-5xl sm:mx-20 lg:mx-auto mt-10">
+  <main class="mx-20 max-sm:mx-5 lg:max-w-5xl sm:mx-20 lg:mx-auto mt-10">
     <div class="mx-auto my-10 sticky top-3 z-30">
       <div
         class="relative group border rounded-lg bg-white transition focus-within:border-green-600"
@@ -57,7 +57,7 @@ const filteredSurah = computed(() => {
         Tidak ada surat ditemukan.
       </div>
       <div v-else class="space-y-2">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="grid max-sm:grid-cols-2 max-md:grid-cols-3 lg:grid-cols-4 gap-4">
           <div v-for="(item, index) in filteredSurah" :key="item.nomor">
             <Card :surah="item" :index="index" />
           </div>

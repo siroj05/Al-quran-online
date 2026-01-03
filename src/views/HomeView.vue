@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useGetAllSurat } from '@/api/api.query'
 import { computed } from 'vue'
-import Card from '@/components/card.vue'
+import Card from '@/components/Card.vue'
 
 const { data, isLoading } = useGetAllSurat()
 const surah = computed(() => data.value?.data ?? [])

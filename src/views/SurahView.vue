@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useGetSuratById } from '@/api/api.query'
-import { computed, watch, watchEffect } from 'vue'
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 const route = useRoute()
 const { data, isLoading, isError } = useGetSuratById(Number(route.params.id))

@@ -13,7 +13,7 @@ import Navbar from '@/components/Navbar.vue'
       <RouterView />
     </main>
     <footer>
-      <div class="text-center py-10 text-white bg-green-800 mt-10">
+      <div class="text-center py-10 bg-card mt-10">
         &copy; 2026 Al-Qur'an App. Dibuat oleh
         <span class="font-semibold">Siroojuddin Apendi</span>. All rights reserved.
       </div>
